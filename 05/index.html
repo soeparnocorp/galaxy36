@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Anna Laura — Multi-Reality Portal (Dark Cosmic)</title>
+  <link rel="stylesheet" href="../public/style.css" />
+</head>
+<body>
+  <div id="app">
+    <nav class="topbar">
+      <div class="brand">ANNA LAURA</div>
+      <div class="controls">
+        <button id="warpBtn" class="btn">WARP</button>
+        <select id="dimSelect" title="Switch Dimension">
+          <option value="all">All (Superposed)</option>
+          <option value="1">1 — Visual</option>
+          <option value="2">2 — Motion</option>
+          <option value="3">3 — Audio</option>
+          <option value="4">4 — Particles</option>
+          <option value="5">5 — Light</option>
+          <option value="6">6 — Atmosphere</option>
+          <option value="7">7 — Narrative</option>
+          <option value="8">8 — Interaction</option>
+          <option value="9">9 — Portal</option>
+        </select>
+      </div>
+    </nav>
+
+    <main class="stage">
+      <section class="hero">
+        <div class="hero-core" id="heroCore">
+          <h1 data-key="title">—</h1>
+          <p data-key="subtitle">—</p>
+          <div class="hero-cta">
+            <a id="demoLink" class="btn btn-primary" href="#" role="button">Demo</a>
+            <button id="aboutBtn" class="btn">About</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="content" class="content" aria-live="polite">
+        <!-- narrative fragments injected here -->
+      </section>
+    </main>
+  </div>
+
+  <!-- loader orchestrator -->
+  <script type="module" src="../public/main.js"></script>
+</body>
+</html>
