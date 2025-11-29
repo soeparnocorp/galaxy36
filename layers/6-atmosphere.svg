@@ -1,0 +1,21 @@
+<!-- 6-atmosphere.svg — nebula haze -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="neb" cx="30%" cy="30%">
+      <stop offset="0%" stop-color="#b8c6ff" stop-opacity="0.02"/>
+      <stop offset="40%" stop-color="#8f9fe8" stop-opacity="0.018"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="48" /></filter>
+  </defs>
+  <g filter="url(#soft)" opacity="0.95">
+    <ellipse cx="820" cy="320" rx="780" ry="300" fill="url(#neb)"/>
+  </g>
+  <script><![CDATA[
+    (function(){ try{
+      const e=document.querySelector('ellipse'); let t=0;
+      function bob(){ t+=0.0018; const s=1+Math.sin(t)*0.02; e.setAttribute('rx',780*s); requestAnimationFrame(bob)}
+      requestAnimationFrame(bob);
+    }catch(e){} })();
+  ]]></script>
+</svg>
