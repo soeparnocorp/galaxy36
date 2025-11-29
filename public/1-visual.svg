@@ -1,0 +1,34 @@
+<!-- 1-visual.svg — geometric sigil + subtle gold glyphs -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.01"/>
+    </linearGradient>
+    <radialGradient id="gold" cx="50%" cy="50%">
+      <stop offset="0" stop-color="#d4b85a" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#d4b85a" stop-opacity="0.05"/>
+    </radialGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="transparent"/>
+  <g id="geom" transform="translate(0,0)">
+    <circle cx="1240" cy="180" r="220" fill="url(#g1)" />
+    <g transform="translate(260,620) rotate(-10)">
+      <rect x="-420" y="-40" width="840" height="80" rx="40" fill="url(#g1)" />
+    </g>
+    <!-- ancient gold sigil -->
+    <g id="sigil" transform="translate(800,420) scale(0.9)">
+      <circle r="86" fill="none" stroke="url(#gold)" stroke-width="2" opacity="0.9"/>
+      <path d="M-20,-40 L20,-40 L0,30 Z" fill="url(#gold)" opacity="0.6"></path>
+    </g>
+  </g>
+  <script><![CDATA[
+    (function(){ try{
+      const g = document.getElementById('geom');
+      const s = document.getElementById('sigil');
+      let t=0;
+      function tick(){ t+=0.0025; const dx=Math.sin(t)*6; const dy=Math.cos(t*0.8)*4; g.setAttribute('transform',`translate(${dx},${dy})`); s.setAttribute('transform',`translate(800,420) scale(${0.95 + Math.sin(t)*0.02})`); requestAnimationFrame(tick)}
+      requestAnimationFrame(tick);
+    }catch(e){} })();
+  ]]></script>
+</svg>
