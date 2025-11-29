@@ -1,0 +1,12 @@
+/* 5-light.css — bloom, gold accents, pointer-follow radiance */
+:root{--light-size:260px;--light-opacity:0.12}
+.light-orb{position:fixed;border-radius:50%;pointer-events:none;mix-blend-mode:screen;z-index:20;filter:blur(44px);opacity:var(--light-opacity)}
+.light-orb.l1{width:var(--light-size);height:var(--light-size);left:6%;top:9%;background:radial-gradient(circle,#ffffff90, transparent 60%)}
+.light-orb.l2{width:380px;height:380px;right:8%;bottom:16%;background:radial-gradient(circle,#b8c0ff33, transparent 60%);filter:blur(58px)}
+.light-orb.l3{width:280px;height:280px;left:34%;bottom:28%;background:radial-gradient(circle,#f7e2b733, transparent 60%)}
+
+/* ancient glyph highlight */
+.gold-glyph { position: absolute; left:50%; top:20%; transform:translate(-50%, -50%); width:200px; height:200px; background:radial-gradient(circle, rgba(202,168,74,0.12), transparent 40%); border-radius:50%; mix-blend-mode:overlay; pointer-events:none; z-index:18 }
+
+/* pointer micro light */
+.pointer-light{position:fixed;left:0;top:0;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle, rgba(255,255,255,0.9), transparent 60%);pointer-events:none;z-index:60;mix-blend-mode:screen;filter:blur(16px);opacity:0;transition:opacity 220ms linear, transform 180ms ease}
